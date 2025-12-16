@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Showcase Your Work</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#" class="logo">Portfolio</a>
+                
+                <!-- Desktop Menu -->
+                <div class="nav-links desktop-only">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="#home" class="mobile-nav-link">Home</a>
+                <a href="#projects" class="mobile-nav-link">Projects</a>
+                <a href="#about" class="mobile-nav-link">About</a>
+                <a href="#contact" class="mobile-nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-background">
+            <div class="gradient-blob top-right"></div>
+            <div class="gradient-blob bottom-left"></div>
+            <div class="gradient-blob top-left"></div>
+        </div>
+
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Buuwan<br>Shrestha</h1>
+                <p class="hero-subtitle">Java Developer | Python Enthusiast</p>
+                <p class="hero-description">Passionate developer crafting elegant solutions with Java and Python. Building innovative personal projects and constantly learning to push my coding boundaries.</p>
+
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('projects')">View My Projects</button>
+                    <button class="btn btn-outline" onclick="scrollToSection('contact')">Get In Touch</button>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="social-icon" title="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" title="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" title="Email">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image-container">
+                <div class="hero-image" id="heroImage">
+                    <div class="glow-ring"></div>
+                    <img src="C:\Users\lenovo\Documents\bhuwanshrestha01\images\bhu.jpg" alt="Buuwan Shrestha">
+                    <div class="overlay-gradient"></div>
+                    <div class="floating-badge">Available</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="8 12 16 20 24 12"></polyline>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Parallax Section -->
+    <section class="parallax-section">
+        <div class="container parallax-container">
+            <div class="parallax-content">
+                <h2 class="section-title">Multiple Personal<br><span class="gradient-text">Projects</span></h2>
+                <p class="section-description">Driven by passion for clean code and elegant solutions, I've built diverse personal projects using Java and Python. Each project represents my commitment to continuous learning and pushing my technical boundaries.</p>
+                <div class="parallax-stats">
+                    <div>
+                        <h3 class="stat-value">10+</h3>
+                        <p class="stat-label">Personal Projects</p>
+                    </div>
+                    <div>
+                        <h3 class="stat-value">Java & Python</h3>
+                        <p class="stat-label">Primary Languages</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="parallax-element" id="parallaxElement">
+                <div class="code-box">
+                    <div class="code-comment">// my_passion.java</div>
+                    <div class="code-content">
+                        <div><span class="keyword">public class</span> <span class="class-name">Developer</span> <span class="bracket">{</span></div>
+                        <div class="indent-1"><span class="keyword">private</span> <span class="type">String[]</span> languages <span class="operator">=</span></div>
+                        <div class="indent-2"><span class="string">{"Java", "Python"}</span></div>
+                        <div class="indent-1"><span class="keyword">public void</span> <span class="method">buildAwesome</span><span class="bracket">()</span> <span class="bracket">{</span></div>
+                        <div class="indent-2"><span class="keyword">while</span> <span class="bracket">(</span><span class="variable">passionate</span><span class="bracket">) {</span></div>
+                        <div class="indent-3"><span class="method">create</span><span class="bracket">()</span> <span class="operator">→</span> <span class="variable">projects</span>;</div>
+                        <div class="indent-3"><span class="method">learn</span><span class="bracket">()</span> <span class="operator">→</span> <span class="variable">grow</span>;</div>
+                        <div class="indent-2"><span class="bracket">}</span></div>
+                        <div class="indent-1"><span class="bracket">}</span></div>
+                        <div><span class="bracket">}</span></div>
+                    </div>
+                </div>
+                <div class="floating-circle circle-1"></div>
+                <div class="floating-circle circle-2"></div>
+                <div class="floating-circle circle-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured<span class="gradient-text"> Projects</span></h2>
+                <p class="section-description">Personal projects showcasing my expertise in Java and Python development with focus on elegant solutions and best practices.</p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="C:\Users\lenovo\Documents\bhuwanshrestha01\images\image copy 4.png" alt="Tourism Management Application">
+                        <div class="project-overlay">
+                            <p class="project-overlay-text">View Project</p>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Tourism Management Application</h3>
+                        <p class="project-description">A comprehensive task management application built with Java featuring multi-threading support, persistent storage, and real-time task synchronization.</p>
+                        <div class="project-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Swing</span>
+                            <span class="tag">Database</span>
+                            <span class="tag">Multithreading</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            Code
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="C:\Users\lenovo\Documents\bhuwanshrestha01\images\image.png" alt="Banking System Demo">
+                        <div class="project-overlay">
+                            <p class="project-overlay-text">View Project</p>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Banking System Demo</h3>
+                        <p class="project-description">Powerful data analysis and visualization tool built with Python, utilizing pandas, numpy, and matplotlib for comprehensive data insights and reporting.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">Matplotlib</span>
+                            <span class="tag">Data Analysis</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            Code
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="C:\Users\lenovo\Documents\bhuwanshrestha01\images\image copy.png" alt="Wildfire Prediction">
+                        <div class="project-overlay">
+                            <p class="project-overlay-text">View Project</p>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Wildfire Prediction</h3>
+                        <p class="project-description">Custom 2D game engine developed in Java from scratch with sprite management, physics simulation, and collision detection systems.</p>
+                        <div class="project-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Game Dev</span>
+                            <span class="tag">Graphics</span>
+                            <span class="tag">Physics</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            Code
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="C:\Users\lenovo\Documents\bhuwanshrestha01\images\image copy 2.png" alt="Flood Detection System">
+                        <div class="project-overlay">
+                            <p class="project-overlay-text">View Project</p>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Flood Detection System</h3>
+                        <p class="project-description">Intelligent web scraping tool with data cleaning, analysis, and export capabilities. Built with Python for automated data collection and processing.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">BeautifulSoup</span>
+                            <span class="tag">Requests</span>
+                            <span class="tag">Automation</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2 class="section-title">About<span class="gradient-text"> Me</span></h2>
+                    <p class="about-description">I'm Buuwan Shrestha, a passionate Java developer with growing interest in Python. Focused on building robust, elegant solutions through personal projects. I'm self-driven and committed to continuous learning and mastering best practices in software development.</p>
+
+                    <div class="skills-section">
+                        <div class="skill-group">
+                            <h3 class="skill-category">Languages</h3>
+                            <div class="skill-items">
+                                <span class="skill-item">Java</span>
+                                <span class="skill-item">Python</span>
+                                <span class="skill-item">JavaScript</span>
+                                <span class="skill-item">SQL</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-group">
+                            <h3 class="skill-category">Frameworks & Tools</h3>
+                            <div class="skill-items">
+                                <span class="skill-item">Spring Boot</span>
+                                <span class="skill-item">Django</span>
+                                <span class="skill-item">Git</span>
+                                <span class="skill-item">Maven</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-group">
+                            <h3 class="skill-category">Concepts</h3>
+                            <div class="skill-items">
+                                <span class="skill-item">OOP</span>
+                                <span class="skill-item">Data Structures</span>
+                                <span class="skill-item">Algorithms</span>
+                                <span class="skill-item">Design Patterns</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-sidebar">
+                    <div class="journey-box">
+                        <h3 class="journey-title">My Journey</h3>
+                        <div class="journey-items">
+                            <div class="journey-item">
+                                <h4 class="journey-header">Learning & Growing</h4>
+                                <p class="journey-meta">Currently Focused</p>
+                                <p class="journey-text">Building diverse personal projects to strengthen my Java and Python fundamentals, exploring design patterns and best practices.</p>
+                            </div>
+                            <div class="journey-item">
+                                <h4 class="journey-header">Multiple Personal Projects</h4>
+                                <p class="journey-meta">Portfolio Builder</p>
+                                <p class="journey-text">Created projects spanning game development, data analysis, web scraping, and system design using modern development practices.</p>
+                            </div>
+                            <div class="journey-item">
+                                <h4 class="journey-header">Passionate Developer</h4>
+                                <p class="journey-meta">Self-Motivated</p>
+                                <p class="journey-text">Committed to writing clean code, continuous improvement, and staying updated with latest technologies in the development world.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-box stat-box-1">
+                            <p class="stat-number">10+</p>
+                            <p class="stat-title">Personal Projects</p>
+                        </div>
+                        <div class="stat-box stat-box-2">
+                            <p class="stat-number">Self-Taught</p>
+                            <p class="stat-title">Always Learning</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-background">
+            <div class="gradient-blob top-right"></div>
+            <div class="gradient-blob bottom-left"></div>
+        </div>
+
+        <div class="container contact-container">
+            <div class="contact-header">
+                <h2 class="section-title">Let's<span class="gradient-text"> Connect</span></h2>
+                <p class="section-description">Interested in my work? Let's discuss Java projects, Python development, or anything tech-related. I'd love to hear from you!</p>
+            </div>
+
+            <div class="contact-grid">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="your.email@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tell me about your project..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary form-submit">Send Message</button>
+                    <div class="form-message" id="formMessage"></div>
+                </form>
+
+                <div class="contact-info">
+                    <div class="info-card">
+                        <h3 class="info-title">Get In Touch</h3>
+                        
+                        <a href="mailto:buuwan@example.com" class="contact-method">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="contact-label">Email</p>
+                                <p class="contact-value">buuwan@example.com</p>
+                            </div>
+                        </a>
+
+                        <a href="https://linkedin.com" class="contact-method">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="contact-label">LinkedIn</p>
+                                <p class="contact-value">linkedin.com/in/buuwan</p>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com" class="contact-method">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="contact-label">GitHub</p>
+                                <p class="contact-value">https://github.com/Bhuwan138312</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="contact-stats">
+                        <div class="contact-stat">
+                            <p class="stat-number">10+</p>
+                            <p class="stat-title">Projects Built</p>
+                        </div>
+                        <div class="contact-stat">
+                            <p class="stat-number">Java & Python</p>
+                            <p class="stat-title">Main Languages</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

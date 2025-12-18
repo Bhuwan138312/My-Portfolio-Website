@@ -7,20 +7,19 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Navbar Section -->
     <nav class="navbar" id="navbar">
         <div class="container">
             <div class="nav-content">
-                <a href="#" class="logo">Portfolio</a>
-                
+                <a href="index.html" class="logo">Portfolio</a>
                 <!-- Desktop Menu -->
                 <div class="nav-links desktop-only">
                     <a href="#home" class="nav-link">Home</a>
                     <a href="#projects" class="nav-link">Projects</a>
                     <a href="#about" class="nav-link">About</a>
+                    <a href="productpage.html" class="nav-link">Products</a>
                     <a href="#contact" class="nav-link">Contact</a>
                 </div>
-
                 <!-- Mobile Menu Button -->
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <span></span>
@@ -28,12 +27,12 @@
                     <span></span>
                 </button>
             </div>
-
             <!-- Mobile Menu -->
             <div class="mobile-menu" id="mobileMenu">
                 <a href="#home" class="mobile-nav-link">Home</a>
                 <a href="#projects" class="mobile-nav-link">Projects</a>
                 <a href="#about" class="mobile-nav-link">About</a>
+                <a href="productpage.html" class="mobile-nav-link">Products</a>
                 <a href="#contact" class="mobile-nav-link">Contact</a>
             </div>
         </div>
@@ -46,18 +45,15 @@
             <div class="gradient-blob bottom-left"></div>
             <div class="gradient-blob top-left"></div>
         </div>
-
         <div class="container hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">Buuwan<br>Shrestha</h1>
                 <p class="hero-subtitle">Java Developer | Python Enthusiast</p>
                 <p class="hero-description">Passionate developer crafting elegant solutions with Java and Python. Building innovative personal projects and constantly learning to push my coding boundaries.</p>
-
                 <div class="hero-buttons">
                     <button class="btn btn-primary" onclick="scrollToSection('projects')">View My Projects</button>
                     <button class="btn btn-outline" onclick="scrollToSection('contact')">Get In Touch</button>
                 </div>
-
                 <div class="social-links">
                     <a href="#" class="social-icon" title="GitHub">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -79,17 +75,15 @@
                     </a>
                 </div>
             </div>
-
             <div class="hero-image-container">
                 <div class="hero-image" id="heroImage">
                     <div class="glow-ring"></div>
-                    <img src="C:\Users\lenovo\Documents\bhuwanshrestha01\images\bhu.jpg" alt="Buuwan Shrestha">
+                    <img src="images\me.png" alt="Buuwan Shrestha">
                     <div class="overlay-gradient"></div>
                     <div class="floating-badge">Available</div>
                 </div>
             </div>
         </div>
-
         <div class="scroll-indicator">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="8 12 16 20 24 12"></polyline>
@@ -105,7 +99,7 @@
                 <p class="section-description">Driven by passion for clean code and elegant solutions, I've built diverse personal projects using Java and Python. Each project represents my commitment to continuous learning and pushing my technical boundaries.</p>
                 <div class="parallax-stats">
                     <div>
-                        <h3 class="stat-value">10+</h3>
+                        <h3 class="stat-value">5+</h3>
                         <p class="stat-label">Personal Projects</p>
                     </div>
                     <div>
@@ -114,7 +108,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="parallax-element" id="parallaxElement">
                 <div class="code-box">
                     <div class="code-comment">// my_passion.java</div>
@@ -145,11 +138,11 @@
                 <h2 class="section-title">Featured<span class="gradient-text"> Projects</span></h2>
                 <p class="section-description">Personal projects showcasing my expertise in Java and Python development with focus on elegant solutions and best practices.</p>
             </div>
-
             <div class="projects-grid">
+                <!-- Tourism Management Application -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="C:\Users\lenovo\Documents\bhuwanshrestha01\images\image copy 4.png" alt="Tourism Management Application">
+                        <img src="image copy 4.png" alt="Tourism Management Application">
                         <div class="project-overlay">
                             <p class="project-overlay-text">View Project</p>
                         </div>
@@ -172,21 +165,22 @@
                     </div>
                 </div>
 
+                <!-- Banking System Demo - revised as Java & JavaFX -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="C:\Users\lenovo\Documents\bhuwanshrestha01\images\image.png" alt="Banking System Demo">
+                        <img src="images\bankingsystemdemo.png" alt="Banking System Demo">
                         <div class="project-overlay">
                             <p class="project-overlay-text">View Project</p>
                         </div>
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Banking System Demo</h3>
-                        <p class="project-description">Powerful data analysis and visualization tool built with Python, utilizing pandas, numpy, and matplotlib for comprehensive data insights and reporting.</p>
+                        <p class="project-description">Banking system demo where users can manage their accounts, check balances and perform transactions. Built with Java and JavaFX for an interactive GUI experience.</p>
                         <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Pandas</span>
-                            <span class="tag">Matplotlib</span>
-                            <span class="tag">Data Analysis</span>
+                            <span class="tag">Java</span>
+                            <span class="tag">JavaFX</span>
+                            <span class="tag">Accounts</span>
+                            <span class="tag">GUI</span>
                         </div>
                         <a href="#" class="project-link">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -197,9 +191,10 @@
                     </div>
                 </div>
 
+                <!-- Wildfire Prediction -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="C:\Users\lenovo\Documents\bhuwanshrestha01\images\image copy.png" alt="Wildfire Prediction">
+                        <img src="images\image.png" alt="Wildfire Prediction">
                         <div class="project-overlay">
                             <p class="project-overlay-text">View Project</p>
                         </div>
@@ -222,9 +217,10 @@
                     </div>
                 </div>
 
+                <!-- Flood Detection System -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="C:\Users\lenovo\Documents\bhuwanshrestha01\images\image copy 2.png" alt="Flood Detection System">
+                        <img src="images\flooddetection.jpeg" alt="Flood Detection System">
                         <div class="project-overlay">
                             <p class="project-overlay-text">View Project</p>
                         </div>
@@ -246,6 +242,59 @@
                         </a>
                     </div>
                 </div>
+
+                <!-- Course Registration Application -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/student course registratation.png" alt="Course Registration Application">
+                        <div class="project-overlay">
+                            <p class="project-overlay-text">View Project</p>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Course Registration Application</h3>
+                        <p class="project-description">Students first login with their ID, and after login they can see available courses and enroll in them. Simple, student-friendly app for course management.</p>
+                        <div class="project-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">JavaFX</span>
+                            <span class="tag">Student</span>
+                            <span class="tag">Course Management</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Storepilot - Inventory Management App -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/ui.png" alt="Storepilot Inventory Management App">
+                        <div class="project-overlay">
+                            <p class="project-overlay-text">View Project</p>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Storepilot - Inventory Management App</h3>
+                        <p class="project-description">Tracks shop stock, manages accounts, shows visual data and more. Built using Java, JavaFX, and SQLite for robust inventory and account management.</p>
+                        <div class="project-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">JavaFX</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">Inventory</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            Code
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -257,7 +306,6 @@
                 <div class="about-content">
                     <h2 class="section-title">About<span class="gradient-text"> Me</span></h2>
                     <p class="about-description">I'm Buuwan Shrestha, a passionate Java developer with growing interest in Python. Focused on building robust, elegant solutions through personal projects. I'm self-driven and committed to continuous learning and mastering best practices in software development.</p>
-
                     <div class="skills-section">
                         <div class="skill-group">
                             <h3 class="skill-category">Languages</h3>
@@ -268,7 +316,6 @@
                                 <span class="skill-item">SQL</span>
                             </div>
                         </div>
-
                         <div class="skill-group">
                             <h3 class="skill-category">Frameworks & Tools</h3>
                             <div class="skill-items">
@@ -278,7 +325,6 @@
                                 <span class="skill-item">Maven</span>
                             </div>
                         </div>
-
                         <div class="skill-group">
                             <h3 class="skill-category">Concepts</h3>
                             <div class="skill-items">
@@ -290,7 +336,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="about-sidebar">
                     <div class="journey-box">
                         <h3 class="journey-title">My Journey</h3>
@@ -312,10 +357,9 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="stats-grid">
                         <div class="stat-box stat-box-1">
-                            <p class="stat-number">10+</p>
+                            <p class="stat-number">5+</p>
                             <p class="stat-title">Personal Projects</p>
                         </div>
                         <div class="stat-box stat-box-2">
@@ -334,13 +378,11 @@
             <div class="gradient-blob top-right"></div>
             <div class="gradient-blob bottom-left"></div>
         </div>
-
         <div class="container contact-container">
             <div class="contact-header">
                 <h2 class="section-title">Let's<span class="gradient-text"> Connect</span></h2>
                 <p class="section-description">Interested in my work? Let's discuss Java projects, Python development, or anything tech-related. I'd love to hear from you!</p>
             </div>
-
             <div class="contact-grid">
                 <form class="contact-form" id="contactForm">
                     <div class="form-group">
@@ -358,11 +400,9 @@
                     <button type="submit" class="btn btn-primary form-submit">Send Message</button>
                     <div class="form-message" id="formMessage"></div>
                 </form>
-
                 <div class="contact-info">
                     <div class="info-card">
                         <h3 class="info-title">Get In Touch</h3>
-                        
                         <a href="mailto:buuwan@example.com" class="contact-method">
                             <div class="contact-icon">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -375,7 +415,6 @@
                                 <p class="contact-value">buuwan@example.com</p>
                             </div>
                         </a>
-
                         <a href="https://linkedin.com" class="contact-method">
                             <div class="contact-icon">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -389,7 +428,6 @@
                                 <p class="contact-value">linkedin.com/in/buuwan</p>
                             </div>
                         </a>
-
                         <a href="https://github.com" class="contact-method">
                             <div class="contact-icon">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -402,10 +440,9 @@
                             </div>
                         </a>
                     </div>
-
                     <div class="contact-stats">
                         <div class="contact-stat">
-                            <p class="stat-number">10+</p>
+                            <p class="stat-number">5+</p>
                             <p class="stat-title">Projects Built</p>
                         </div>
                         <div class="contact-stat">
@@ -417,7 +454,6 @@
             </div>
         </div>
     </section>
-
     <script src="script.js"></script>
 </body>
 </html>

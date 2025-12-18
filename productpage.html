@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Products - Buwaan Shrestha</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">Products</a>
+                
+                <!-- Desktop Menu -->
+                <div class="nav-links desktop-only">
+                    <a href="index.html#home" class="nav-link">Home</a>
+                    <a href="products.html" class="nav-link active">Products</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="index.html#home" class="mobile-nav-link">Home</a>
+                <a href="products.html" class="mobile-nav-link active">Products</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products Hero Section -->
+    <section class="products-hero">
+        <div class="hero-background">
+            <div class="gradient-blob top-right"></div>
+            <div class="gradient-blob bottom-left"></div>
+        </div>
+        
+        <div class="container">
+            <div class="products-hero-content">
+                <h1 class="products-title">My <span class="gradient-text">Products</span></h1>
+                <p class="products-subtitle">Download my applications and tools designed to make your life easier</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid Section -->
+    <section class="products-section">
+        <div class="container">
+            <!-- Product Card 1 - StorePilot -->
+            <div class="product-card featured">
+                <div class="product-badge">Featured</div>
+                
+                <div class="product-content-wrapper">
+                    <div class="product-left">
+                        <div class="product-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 7h-9"></path>
+                                <path d="M14 17H5"></path>
+                                <circle cx="17" cy="17" r="3"></circle>
+                                <circle cx="7" cy="7" r="3"></circle>
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            </svg>
+                        </div>
+                        
+                        <div class="product-info">
+                            <h2 class="product-name">StorePilot</h2>
+                            <p class="product-version">Version 1.0.0 • Latest Release</p>
+                            <p class="product-description">
+                                A comprehensive store management application designed to streamline inventory tracking, 
+                                sales management, and business operations. Perfect for retail stores, small businesses, 
+                                and shop owners looking to digitize their operations with an easy-to-use interface.
+                            </p>
+                            
+                            <div class="product-features">
+                                <div class="feature-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Inventory Management</span>
+                                </div>
+                                <div class="feature-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Sales Tracking</span>
+                                </div>
+                                <div class="feature-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Product Catalog</span>
+                                </div>
+                                <div class="feature-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Business Analytics</span>
+                                </div>
+                                <div class="feature-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Customer Management</span>
+                                </div>
+                                <div class="feature-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Report Generation</span>
+                                </div>
+                            </div>
+
+                            <div class="product-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Platform:</span>
+                                    <span class="spec-value">Windows 10/11</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Size:</span>
+                                    <span class="spec-value">~50 MB</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Requirements:</span>
+                                    <span class="spec-value">Java Runtime 8+ / .NET Framework</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">License:</span>
+                                    <span class="spec-value">Free & Open Source</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-right">
+                        <div class="product-screenshot">
+                            <img src="images/ui.png" alt="StorePilot Application" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div class="screenshot-placeholder">
+                                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                    <polyline points="21 15 16 10 5 21"></polyline>
+                                </svg>
+                                <p style="margin-top: 12px; color: rgba(99, 102, 241, 0.5); font-size: 14px;">StorePilot</p>
+                            </div>
+                        </div>
+
+                        <div class="product-actions">
+                            <button class="download-btn primary" onclick="downloadApp('storepilot')">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7 10 12 15 17 10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                                Download for Windows
+                            </button>
+                            <button class="download-btn secondary" onclick="window.open('https://github.com/Bhuwan138312/StorePilot_Release/releases/tag/v1.0.0', '_blank')">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                                View on GitHub
+                            </button>
+                        </div>
+
+                        <div class="download-info">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                            </svg>
+                            <span>Free & Open Source • No registration required</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation Guide Section -->
+    <section class="installation-section">
+        <div class="container">
+            <h2 class="section-title">Installation <span class="gradient-text">Guide</span></h2>
+            
+            <div class="installation-steps">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Download</h3>
+                    <p class="step-description">Click the download button above to get the installer file directly to your computer.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Run Installer</h3>
+                    <p class="step-description">Locate the downloaded file and double-click to start the installation process.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Follow Prompts</h3>
+                    <p class="step-description">Follow the on-screen instructions to complete the installation on your system.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Launch & Enjoy</h3>
+                    <p class="step-description">Open the application from your desktop or start menu and start using it!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 class="faq-question">Is it really free?</h3>
+                    <p class="faq-answer">Yes! All applications are completely free and open-source. No hidden costs or subscriptions.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">What are the system requirements?</h3>
+                    <p class="faq-answer">Most applications require Windows 10/11 and Java Runtime 8 or higher. Specific requirements are listed for each product.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">How do I report bugs?</h3>
+                    <p class="faq-answer">You can report issues on the GitHub repository or contact me directly through the contact form.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">Can I contribute to development?</h3>
+                    <p class="faq-answer">Absolutely! All projects are open-source. Check the GitHub repository for contribution guidelines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SINGLE COMBINED JS FOR ALL FUNCTIONALITY -->
+    <script>
+// ==================== NAVBAR SCROLL EFFECT ====================
+const navbar = document.getElementById('navbar');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+if(navbar){
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+}
+
+// ==================== MOBILE MENU TOGGLE ====================
+if (mobileMenuBtn && mobileMenu) {
+  mobileMenuBtn.addEventListener('click', () => {
+    mobileMenuBtn.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+  });
+
+  // Close mobile menu when a link is clicked
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenuBtn.classList.remove('active');
+      mobileMenu.classList.remove('active');
+    });
+  });
+}
+
+// ==================== PRODUCTS PAGE: DOWNLOAD CONFIGURATION ====================
+// Direct download URLs from GitHub releases
+const DOWNLOAD_URLS = {
+  'storepilot': 'https://github.com/Bhuwan138312/StorePilot_Release/releases/download/v1.0.0/Storepilot_setup.exe',
+  // Add more products here as you release them
+  // 'tourism-management': 'https://github.com/Bhuwan138312/YOUR-REPO/releases/download/v1.0.0/TourismManagement-Setup.exe',
+  // 'banking-system': 'https://github.com/Bhuwan138312/YOUR-REPO/releases/download/v1.0.0/BankingSystem-Setup.exe'
+};
+
+function downloadApp(appId) {
+  const downloadUrl = DOWNLOAD_URLS[appId];
+  
+  if (!downloadUrl) {
+    console.error('Download URL not found for app:', appId);
+    showNotification('Download URL not configured', 'error');
+    return;
+  }
+
+  // Create a temporary anchor element to trigger download
+  const link = document.createElement('a');
+  link.href = downloadUrl;
+  link.download = ''; // This will use the filename from the URL
+  document.body.appendChild(link);
+  
+  // Show downloading notification
+  showNotification('Download starting...', 'info');
+  
+  // Trigger the download
+  link.click();
+  
+  // Remove the temporary link
+  document.body.removeChild(link);
+  
+  // Track download (optional - for analytics)
+  trackDownload(appId);
+  
+  // Show success notification after a short delay
+  setTimeout(() => {
+    showNotification('Download started! Check your downloads folder.', 'success');
+  }, 500);
+}
+
+function showNotification(message, type = 'info') {
+  // Remove existing notification if present
+  const existingNotification = document.querySelector('.download-notification');
+  if (existingNotification) {
+    existingNotification.remove();
+  }
+
+  // Create notification element
+  const notification = document.createElement('div');
+  notification.className = `download-notification ${type}`;
+  notification.innerHTML = `
+    <div class="notification-content">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        ${getNotificationIcon(type)}
+      </svg>
+      <span>${message}</span>
+    </div>
+    <button class="notification-close" onclick="this.parentElement.remove()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  `;
+
+  // Add styles
+  const style = document.createElement('style');
+  style.textContent = `
+    .download-notification {
+      position: fixed;
+      top: 80px;
+      right: 20px;
+      background-color: white;
+      border-radius: 12px;
+      padding: 16px 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      z-index: 1000;
+      min-width: 320px;
+      animation: slideIn 0.3s ease-out;
+      border: 1px solid rgba(99, 102, 241, 0.2);
+    }
+
+    @keyframes slideIn {
+      from { transform: translateX(400px); opacity: 0;}
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    @keyframes slideOut {
+      from {transform: translateX(0); opacity: 1; }
+      to {transform: translateX(400px); opacity: 0;}
+    }
+
+    .notification-content {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .download-notification.success { border-left: 4px solid #10b981; }
+    .download-notification.success svg { color: #10b981; }
+
+    .download-notification.error { border-left: 4px solid #ef4444; }
+    .download-notification.error svg { color: #ef4444; }
+
+    .download-notification.info { border-left: 4px solid #6366f1; }
+    .download-notification.info svg { color: #6366f1; }
+
+    .notification-close {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      display: flex;
+      align-items: center;
+      color: #999;
+      transition: color 0.2s;
+    }
+    .notification-close:hover { color: #666; }
+
+    @media (max-width: 480px) {
+      .download-notification {
+        right: 10px;
+        left: 10px;
+        min-width: auto;
+      }
+    }
+  `;
+
+  if (!document.querySelector('style[data-notification-styles]')) {
+    style.setAttribute('data-notification-styles', 'true');
+    document.head.appendChild(style);
+  }
+
+  document.body.appendChild(notification);
+
+  // Auto remove after 5 seconds
+  setTimeout(() => {
+    if (notification.parentElement) {
+      notification.style.animation = 'slideOut 0.3s ease-out';
+      setTimeout(() => notification.remove(), 300);
+    }
+  }, 5000);
+}
+
+function getNotificationIcon(type) {
+  switch (type) {
+    case 'success': return '<polyline points="20 6 9 17 4 12"></polyline>';
+    case 'error': return '<circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line>';
+    case 'info': default:
+      return '<circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line>';
+  }
+}
+
+function trackDownload(appId) {
+  // Log download information
+  const downloadInfo = {
+    app: appId,
+    timestamp: new Date().toISOString(),
+    userAgent: navigator.userAgent
+  };
+  console.log('Download tracked:', downloadInfo);
+  // Optionally add analytics tracking
+  // if (typeof gtag !== 'undefined') { gtag('event', 'download', { 'app_name': appId, 'timestamp': new Date().toISOString() }); }
+}
+
+// ==================== PAGE LOAD ANIMATIONS ====================
+document.addEventListener('DOMContentLoaded', () => {
+  // Animate product cards on scroll
+  const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, observerOptions);
+
+  // Product cards
+  document.querySelectorAll('.product-card').forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(30px)';
+    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(card);
+  });
+  // Installation step cards
+  document.querySelectorAll('.step-card').forEach((card, index) => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(30px)';
+    card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+    observer.observe(card);
+  });
+  // FAQ items
+  document.querySelectorAll('.faq-item').forEach((item, index) => {
+    item.style.opacity = '0';
+    item.style.transform = 'translateY(20px)';
+    item.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`;
+    observer.observe(item);
+  });
+});
+
+// ==================== SMOOTH SCROLL FOR NAVIGATION ====================
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    if (href !== '#' && document.querySelector(href)) {
+      e.preventDefault();
+      document.querySelector(href).scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+// ==================== UTILITY: Get GitHub Release URL ====================
+function getGitHubReleaseUrl(username, repo, tag, filename) {
+  return `https://github.com/${username}/${repo}/releases/download/${tag}/${filename}`;
+}
+    </script>
+</body>
+
+</html>

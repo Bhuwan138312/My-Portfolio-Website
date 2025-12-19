@@ -15,9 +15,12 @@ if (navbar) {
 
 // ==================== MOBILE MENU TOGGLE ====================
 if (mobileMenuBtn && mobileMenu) {
-  mobileMenuBtn.addEventListener('click', () => {
+  mobileMenuBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
     mobileMenuBtn.classList.toggle('active');
     mobileMenu.classList.toggle('active');
+    navbar.classList.toggle('mobile-open');
   });
 
   // Close mobile menu when a link is clicked
@@ -26,7 +29,17 @@ if (mobileMenuBtn && mobileMenu) {
     link.addEventListener('click', () => {
       mobileMenuBtn.classList.remove('active');
       mobileMenu.classList.remove('active');
+      navbar.classList.remove('mobile-open');
     });
+  });
+
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!navbar.contains(e.target) && mobileMenu.classList.contains('active')) {
+      mobileMenuBtn.classList.remove('active');
+      mobileMenu.classList.remove('active');
+      navbar.classList.remove('mobile-open');
+    }
   });
 }
 

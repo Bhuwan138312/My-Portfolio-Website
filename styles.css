@@ -1039,7 +1039,6 @@ body {
   color: #999;
   margin-top: 4px;
 }
-
 /* ==================== FOOTER ==================== */
 .footer {
   background-color: rgba(26, 29, 35, 0.95);
@@ -1650,6 +1649,7 @@ body {
   .products-subtitle {
     font-size: 16px;
   }
+  
 
   .product-card {
     padding: 24px 16px;

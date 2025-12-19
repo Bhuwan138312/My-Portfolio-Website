@@ -1,5 +1,4 @@
 :root {
-  /* Updated background to light gradient with #DFF5FF, adjusted all text colors to dark for light theme */
   --background: linear-gradient(135deg, #DFF5FF 0%, #F0EBFF 50%, #E8F4FF 100%);
   --foreground: #1a1d23;
   --card: #ffffff;
@@ -29,7 +28,6 @@ html {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-  /* Background now uses gradient instead of solid color */
   background: var(--background);
   color: var(--foreground);
   line-height: 1.6;
@@ -55,7 +53,6 @@ body {
 }
 
 .navbar.scrolled {
-  /* Updated to white with light transparency for light theme */
   background-color: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(10px);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
@@ -105,6 +102,7 @@ body {
   background: none;
   border: none;
   cursor: pointer;
+  z-index: 101;
 }
 
 .mobile-menu-btn span {
@@ -130,7 +128,15 @@ body {
   display: none;
   flex-direction: column;
   gap: 16px;
-  padding-bottom: 16px;
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu.active {
+  display: flex;
 }
 
 .mobile-nav-link {
@@ -139,6 +145,7 @@ body {
   font-size: 14px;
   font-weight: 500;
   transition: color 0.3s ease;
+  padding: 8px 0;
 }
 
 .mobile-nav-link:hover {
@@ -155,7 +162,6 @@ body {
   justify-content: center;
   padding: 120px 16px 80px;
   overflow: hidden;
-  /* Updated background to gradient with lighter #DDF2FD color */
   background: linear-gradient(135deg, #DDF2FD 0%, #E8ECFF 50%, #DDF2FD 100%);
 }
 
@@ -334,7 +340,6 @@ body {
   width: 400px;
   height: 400px;
   transition: transform 0.1s ease-out;
-  /* Added border-radius: 50% for perfect circle profile picture */
   border-radius: 50%;
 }
 
@@ -439,7 +444,6 @@ body {
   margin-bottom: 32px;
   max-width: 512px;
   line-height: 1.8;
-  /* Center align the description text and add margin auto */
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -471,7 +475,6 @@ body {
 .code-box {
   position: absolute;
   inset: 0;
-  /* Updated code box styling for light theme and enhanced parallax effect */
   background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(129, 140, 248, 0.05) 100%);
   border: 2px solid rgba(99, 102, 241, 0.2);
   border-radius: 24px;
@@ -861,7 +864,6 @@ body {
 .contact-section {
   position: relative;
   padding: 128px 16px;
-  /* Updated background to gradient with lighter #DDF2FD color */
   background: linear-gradient(135deg, #DDF2FD 0%, #E8ECFF 50%, #DDF2FD 100%);
   overflow: hidden;
 }
@@ -1039,6 +1041,7 @@ body {
   color: #999;
   margin-top: 4px;
 }
+
 /* ==================== FOOTER ==================== */
 .footer {
   background-color: rgba(26, 29, 35, 0.95);
@@ -1104,95 +1107,6 @@ body {
   border-width: 0;
 }
 
-/* ==================== RESPONSIVE DESIGN ==================== */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-
-  .mobile-menu-btn {
-    display: flex;
-  }
-
-  .navbar.mobile-open .mobile-menu {
-    display: flex;
-  }
-
-  .hero-title {
-    font-size: 40px;
-  }
-
-  .hero-container {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .hero-image {
-    width: 250px;
-    height: 250px;
-  }
-
-  .parallax-container {
-    grid-template-columns: 1fr;
-  }
-
-  .parallax-element {
-    height: 300px;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .section-title {
-    font-size: 36px;
-  }
-
-  .footer-links {
-    flex-direction: column;
-    gap: 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 28px;
-  }
-
-  .hero-description {
-    font-size: 16px;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-  }
-
-  .btn {
-    width: 100%;
-  }
-
-  .section-title {
-    font-size: 28px;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .stats-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .social-links {
-    flex-wrap: wrap;
-  }
-}
-
 /* ==================== PRODUCTS PAGE STYLES ==================== */
 
 .products-hero {
@@ -1226,8 +1140,6 @@ body {
   max-width: 600px;
   margin: 0 auto;
 }
-
-/* ==================== PRODUCTS SECTION ==================== */
 
 .products-section {
   padding: 80px 16px;
@@ -1278,8 +1190,6 @@ body {
   align-items: start;
 }
 
-/* ==================== PRODUCT LEFT SIDE ==================== */
-
 .product-left {
   display: flex;
   gap: 24px;
@@ -1323,8 +1233,6 @@ body {
   margin-bottom: 24px;
 }
 
-/* ==================== PRODUCT FEATURES ==================== */
-
 .product-features {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1344,8 +1252,6 @@ body {
   color: var(--primary);
   flex-shrink: 0;
 }
-
-/* ==================== PRODUCT SPECS ==================== */
 
 .product-specs {
   background-color: rgba(99, 102, 241, 0.05);
@@ -1376,8 +1282,6 @@ body {
   color: var(--foreground);
   font-weight: 500;
 }
-
-/* ==================== PRODUCT RIGHT SIDE ==================== */
 
 .product-right {
   display: flex;
@@ -1411,8 +1315,6 @@ body {
   height: 100%;
   color: rgba(99, 102, 241, 0.3);
 }
-
-/* ==================== DOWNLOAD BUTTONS ==================== */
 
 .product-actions {
   display: flex;
@@ -1478,8 +1380,6 @@ body {
   flex-shrink: 0;
 }
 
-/* ==================== INSTALLATION SECTION ==================== */
-
 .installation-section {
   padding: 80px 16px;
   background: linear-gradient(180deg, transparent, rgba(99, 102, 241, 0.03), transparent);
@@ -1536,8 +1436,6 @@ body {
   line-height: 1.6;
 }
 
-/* ==================== FAQ SECTION ==================== */
-
 .faq-section {
   padding: 80px 16px;
   background: var(--background);
@@ -1576,8 +1474,6 @@ body {
   line-height: 1.7;
 }
 
-/* ==================== ACTIVE NAV LINK ==================== */
-
 .nav-link.active,
 .mobile-nav-link.active {
   color: var(--primary);
@@ -1596,7 +1492,6 @@ body {
 }
 
 /* ==================== RESPONSIVE DESIGN ==================== */
-
 @media (max-width: 1024px) {
   .product-content-wrapper {
     grid-template-columns: 1fr;
@@ -1612,6 +1507,62 @@ body {
 }
 
 @media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .hero-title {
+    font-size: 40px;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .hero-image {
+    width: 250px;
+    height: 250px;
+  }
+
+  .parallax-container {
+    grid-template-columns: 1fr;
+  }
+
+  .parallax-element {
+    height: 300px;
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  .code-box {
+    font-size: 12px;
+    padding: 20px;
+    transform: none !important;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 16px;
+  }
+
   .products-title {
     font-size: 40px;
   }
@@ -1638,6 +1589,38 @@ body {
 }
 
 @media (max-width: 480px) {
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+  }
+
   .products-hero {
     padding: 100px 16px 60px;
   }
@@ -1649,7 +1632,6 @@ body {
   .products-subtitle {
     font-size: 16px;
   }
-  
 
   .product-card {
     padding: 24px 16px;

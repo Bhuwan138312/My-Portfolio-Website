@@ -110,25 +110,68 @@ window.scrollToSection = function(sectionId) {
   }
 }
 
-// ==================== FORM SUBMISSION ====================
+// ==================== FORMSPREE CONTACT FORM SUBMISSION ====================
 const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
+
 if (contactForm && formMessage) {
-  contactForm.addEventListener('submit', (e) => {
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const formData = {
-      name: document.getElementById('name').value,
-      email: document.getElementById('email').value,
-      message: document.getElementById('message').value
-    };
-    formMessage.textContent = '✓ Message Sent!';
-    formMessage.classList.add('success');
-    formMessage.classList.remove('error');
-    contactForm.reset();
+    
+    // Get the submit button
+    const submitBtn = contactForm.querySelector('.form-submit');
+    const originalBtnText = submitBtn.textContent;
+    
+    // Disable button and show loading state
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+    
+    // Get form data
+    const formData = new FormData(contactForm);
+    
+    try {
+      // Send to Formspree
+      const response = await fetch('https://formspree.io/f/xnjqyknw', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        // Success message
+        formMessage.textContent = '✓ Message sent successfully! I\'ll get back to you soon.';
+        formMessage.classList.add('success');
+        formMessage.classList.remove('error');
+        contactForm.reset();
+      } else {
+        // Error message
+        const data = await response.json();
+        if (data.errors) {
+          formMessage.textContent = '✗ Oops! ' + data.errors.map(error => error.message).join(', ');
+        } else {
+          formMessage.textContent = '✗ Oops! There was a problem sending your message.';
+        }
+        formMessage.classList.add('error');
+        formMessage.classList.remove('success');
+      }
+    } catch (error) {
+      // Network error
+      formMessage.textContent = '✗ Network error. Please check your connection and try again.';
+      formMessage.classList.add('error');
+      formMessage.classList.remove('success');
+    }
+    
+    // Re-enable button
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalBtnText;
+    
+    // Clear message after 5 seconds
     setTimeout(() => {
       formMessage.textContent = '';
-      formMessage.classList.remove('success');
-    }, 3000);
+      formMessage.classList.remove('success', 'error');
+    }, 5000);
   });
 }
 

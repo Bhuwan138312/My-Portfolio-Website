@@ -62,7 +62,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// ==================== 3D HERO IMAGE EFFECT ====================
+// ==================== 3D HERO IMAGE EFFECT WITH MOUSE PARALLAX ====================
 const heroImage = document.getElementById('heroImage');
 if (heroImage) {
   document.addEventListener('mousemove', (e) => {
@@ -78,19 +78,77 @@ if (heroImage) {
   });
 }
 
-// ==================== SMOOTH PARALLAX EFFECT ====================
+// ==================== MOUSE PARALLAX FOR HERO SECTION ====================
+const heroSection = document.querySelector('.hero-section');
+if (heroSection) {
+  heroSection.addEventListener('mousemove', (e) => {
+    const { clientX, clientY } = e;
+    const { innerWidth, innerHeight } = window;
+    
+    // Move gradient blobs
+    document.querySelectorAll('.hero-section .gradient-blob').forEach((blob, index) => {
+      const speed = 0.02 + (index * 0.01);
+      const x = (clientX - innerWidth / 2) * speed;
+      const y = (clientY - innerHeight / 2) * speed;
+      blob.style.transition = 'transform 0.3s ease-out';
+      blob.style.transform = `translate(${x}px, ${y}px)`;
+    });
+  });
+}
+
+// ==================== ENHANCED PARALLAX EFFECTS ====================
 const parallaxElement = document.getElementById('parallaxElement');
 let lastScrollY = 0;
 let ticking = false;
 
 function updateParallax() {
   const scrollY = lastScrollY;
+  
+  // Main parallax code box effect
   if (parallaxElement) {
     const parallaxY = scrollY * 0.35;
     const parallaxX = Math.sin(scrollY * 0.008) * 25;
     const tilt = (scrollY * 0.08) % 360;
     parallaxElement.style.transform = `translateY(${parallaxY}px) translateX(${parallaxX}px) rotateZ(${tilt}deg)`;
   }
+  
+  // Parallax for gradient blobs
+  document.querySelectorAll('.gradient-blob').forEach((blob, index) => {
+    const speed = 0.15 + (index * 0.05);
+    const direction = index % 2 === 0 ? 1 : -1;
+    const moveY = scrollY * speed * direction;
+    const moveX = Math.sin(scrollY * 0.005 + index) * 30;
+    blob.style.transform = `translate(${moveX}px, ${moveY}px)`;
+  });
+  
+  // Parallax for floating circles
+  document.querySelectorAll('.floating-circle').forEach((circle, index) => {
+    const speed = 0.2 + (index * 0.08);
+    const moveY = scrollY * speed;
+    const rotate = scrollY * 0.05 * (index % 2 === 0 ? 1 : -1);
+    circle.style.transform = `translateY(${moveY}px) rotate(${rotate}deg)`;
+  });
+  
+  // Parallax for project cards
+  document.querySelectorAll('.project-card').forEach((card, index) => {
+    const rect = card.getBoundingClientRect();
+    const scrollPercent = (window.innerHeight - rect.top) / window.innerHeight;
+    if (scrollPercent > 0 && scrollPercent < 1) {
+      const moveY = (scrollPercent - 0.5) * 20;
+      card.style.transform = `perspective(1000px) translateY(${moveY}px)`;
+    }
+  });
+  
+  // Parallax text fade-in effect
+  document.querySelectorAll('.section-title, .section-description').forEach(element => {
+    const rect = element.getBoundingClientRect();
+    const scrollPercent = (window.innerHeight - rect.top) / window.innerHeight;
+    if (scrollPercent > 0 && scrollPercent < 1) {
+      element.style.opacity = Math.min(scrollPercent * 1.5, 1);
+      element.style.transform = `translateY(${(1 - scrollPercent) * 30}px)`;
+    }
+  });
+  
   ticking = false;
 }
 
@@ -109,6 +167,53 @@ window.scrollToSection = function(sectionId) {
     section.scrollIntoView({ behavior: 'smooth' });
   }
 }
+
+// ==================== INTERACTIVE PROJECT CARDS ====================
+document.querySelectorAll('.project-card').forEach(card => {
+  card.addEventListener('mousemove', (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    
+    const rotateX = (y - centerY) / 20;
+    const rotateY = (centerX - x) / 20;
+    
+    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(0px)`;
+  });
+  
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+  });
+});
+
+// ==================== SKILL ITEMS HOVER EFFECT ====================
+document.querySelectorAll('.skill-item').forEach(item => {
+  item.addEventListener('mouseenter', function() {
+    this.style.transition = 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)';
+  });
+});
+
+// ==================== INTERSECTION OBSERVER FOR ANIMATIONS ====================
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -100px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate-in');
+    }
+  });
+}, observerOptions);
+
+// Observe elements for animation
+document.querySelectorAll('.project-card, .journey-box, .info-card, .stat-box').forEach(el => {
+  observer.observe(el);
+});
 
 // ==================== FORMSPREE CONTACT FORM SUBMISSION ====================
 const contactForm = document.getElementById('contactForm');

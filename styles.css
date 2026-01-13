@@ -1688,7 +1688,7 @@ body {
 .cursor-car {
     position: fixed;
     width: 40px;
-    height: 60px;
+    height: 70px;
     pointer-events: none;
     z-index: 9999;
     will-change: transform;
@@ -2082,3 +2082,4 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
